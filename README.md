@@ -5,10 +5,10 @@ Naively log events to a file on S3
 ## Gem Setup ##
 
 ```ruby
-gem install s3_logger
+gem install s3_log
 
 # Gemfile
-gem 's3_logger'
+gem 's3_log'
 ```
 
 ## Configuration ##
@@ -41,7 +41,7 @@ There is no locking in this process, and an existing file will always be read an
 ## Formal Documentation ##
 
 The actual library docs can be read
-[over on rubydoc](http://rubydoc.info/gems/s3_logger/frames).
+[over on rubydoc](http://rubydoc.info/gems/s3_log/frames).
 
 ## Contributing ##
 
