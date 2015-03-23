@@ -1,4 +1,4 @@
-## S3Logger ##
+## S3Log ##
 
 Naively log events to a file on S3
 
@@ -13,10 +13,10 @@ gem 's3_log'
 
 ## Configuration ##
 
-S3Logger requires an AWS access key id, AWS secret access key, and a S3 bucket (preferably created in advance) name to function. It can be configured (in a Rails initializer or what have you) like so:
+S3Log requires an AWS access key id, AWS secret access key, and a S3 bucket (preferably created in advance) name to function. It can be configured (in a Rails initializer or what have you) like so:
 
 ```ruby
-S3Logger.configure(
+S3Log.configure(
   access_key_id: 'YOUR AWS ACCESS KEY ID',
   secret_access_key: 'YOUR AWS SECRET ACCESS KEY',
   bucket: 'YOUR S3 BUCKET'
@@ -25,10 +25,10 @@ S3Logger.configure(
 
 ## Usage ##
 
-Basically, logging an event is a matter of using S3Logger.write to write content to a given file location on S3. The file does not have to exist prior to writing, and a write always appends to an existing file.
+Basically, logging an event is a matter of using S3Log.write to write content to a given file location on S3. The file does not have to exist prior to writing, and a write always appends to an existing file.
 
 ```ruby
-S3Logger.write('path/to/file', 'Some content')
+S3Log.write('path/to/file', 'Some content')
 ```
 
 ## Caveats ##
@@ -46,7 +46,7 @@ The actual library docs can be read
 ## Contributing ##
 
 Do you use git-flow? I sure do. Please base anything you do off of
-[the develop branch](https://github.com/ess/s3_logger/tree/develop).
+[the develop branch](https://github.com/ess/s3_log/tree/develop).
 
 1. Fork it.
 2. Perform some BDD magic. Seriously. Be testing.
