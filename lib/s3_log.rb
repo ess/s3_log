@@ -1,7 +1,7 @@
 require 'fog/aws/storage'
-require 's3_logger/exceptions'
+require 's3_log/exceptions'
 
-module S3Logger
+module S3Log
   RequiredOptions = [:access_key_id, :secret_access_key, :bucket]
 
   def self.storage

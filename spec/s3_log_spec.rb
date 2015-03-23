@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 's3_logger'
+require 's3_log'
 
-describe S3Logger do
+describe S3Log do
   let(:access_key_id) {'ACCESS_KEY_ID'}
   let(:secret_access_key) {'SECRET_ACCESS_KEY'}
   let(:bucket) {'bucket'}
@@ -27,7 +27,7 @@ describe S3Logger do
       good_options.delete(:access_key_id)
 
       expect{described_class.configure(good_options)}.
-        to raise_error(S3Logger::InvalidConfigError)
+        to raise_error(S3Log::InvalidConfigError)
     end
 
     it 'requires an aws secret access key' do
@@ -37,7 +37,7 @@ describe S3Logger do
       good_options.delete(:secret_access_key)
 
       expect{described_class.configure(good_options)}.
-        to raise_error(S3Logger::InvalidConfigError)
+        to raise_error(S3Log::InvalidConfigError)
 
     end
 
@@ -48,7 +48,7 @@ describe S3Logger do
       good_options.delete(:bucket)
 
       expect{described_class.configure(good_options)}.
-        to raise_error(S3Logger::InvalidConfigError)
+        to raise_error(S3Log::InvalidConfigError)
     end
   end
 

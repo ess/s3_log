@@ -1,4 +1,4 @@
-module S3Logger
+module S3Log
   class Error < StandardError ; end
 
   class InvalidConfigError < Error
