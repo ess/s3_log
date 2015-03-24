@@ -1,5 +1,6 @@
 ## History ##
 
+* 0.0.5 - Added formal API docs
 * 0.0.4 - Even more README reference fixes
 * 0.0.3 - Fixed README to remove s3_logger references
 * 0.0.2 - Renamed to S3Log to avoid conflict with an existing gem
